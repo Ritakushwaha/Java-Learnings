@@ -35,4 +35,8 @@ java -classpath target/classes/ com.example.App
 mvn package
 ```
 
+## 5. Run the jar file
 
+```
+java -jar /home/rita/Documents/Java-Learnings/MavenProject/target/MavenProject-1.0-SNAPSHOT.jar 
+```
