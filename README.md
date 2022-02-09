@@ -2,13 +2,50 @@
 
 # Maven Project creation
 
-## 1. Create Maven Project Architecture
+## Download and Installation -
+
+* Download maven 3.8.4 version
+```
+$wget https://downloads.apache.org/maven/maven-3/3.8.4/binaries/apache-maven-3.8.4-bin.tar.gz -P/tmp
+```
+* Untar downloaded file to /opt
+```
+$sudo tar xf /tmp/apache-maven-*.tar.gz -C /opt
+```
+* Install the alternative version for the mvn in your system
+```
+$sudo update-alternatives --install /usr/bin/mvn mvn /opt/apache-maven-3.8.4/bin/mvn 100
+```
+* Check if your configuration is ok. You may use your current or the 3.8.4 whenever you wish, running the command below.
+```
+$sudo update-alternatives --config mvn
+```
+* Change alternative to new one (Not needed if mvn version is already latest)
+```
+sudo update-alternatives --config mvn
+
+# Press enter to keep the current choice[*], or type selection number: 2 
+```
+* Check the mvn version
+```
+$mvn -version
+```
+* type command
+```
+$type -a mvn
+```
+* Set the path
+```
+$export PATH=/opt/apache-maven-3.8.4/bin/:$PATH
+```
+
+### 1. Create Maven Project Architecture
 
 ```
 mvn archetype:generate -DgroupId=com.example -DartifactId=MavenProject -DarchetypeArtifactId=maven-archetype-quickstart -DinteractiveMode=false
 ```
 
-## 2. Compile the Maven Java Project
+### 2. Compile the Maven Java Project
 
 ```
 mvn clean compile
@@ -77,19 +114,19 @@ Before running above code make sure your pom file should contain the following p
 </build>
 ```
 
-## 3. Run the Maven Java Project
+### 3. Run the Maven Java Project
 
 ```
 java -classpath target/classes/ com.example.App
 ```
 
-## 4. Package maven project
+### 4. Package maven project
 
 ```
 mvn package
 ```
 
-## 5. Run the jar file
+### 5. Run the jar file
 
 ```
 java -jar /home/rita/Documents/Java-Learnings/MavenProject/target/MavenProject-1.0-SNAPSHOT.jar 
