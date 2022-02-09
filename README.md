@@ -6,19 +6,19 @@
 
 * Download maven 3.8.4 version
 ```
-$wget https://downloads.apache.org/maven/maven-3/3.8.4/binaries/apache-maven-3.8.4-bin.tar.gz -P/tmp
+wget https://downloads.apache.org/maven/maven-3/3.8.4/binaries/apache-maven-3.8.4-bin.tar.gz -P/tmp
 ```
 * Untar downloaded file to /opt
 ```
-$sudo tar xf /tmp/apache-maven-*.tar.gz -C /opt
+sudo tar xf /tmp/apache-maven-*.tar.gz -C /opt
 ```
 * Install the alternative version for the mvn in your system
 ```
-$sudo update-alternatives --install /usr/bin/mvn mvn /opt/apache-maven-3.8.4/bin/mvn 100
+sudo update-alternatives --install /usr/bin/mvn mvn /opt/apache-maven-3.8.4/bin/mvn 100
 ```
 * Check if your configuration is ok. You may use your current or the 3.8.4 whenever you wish, running the command below.
 ```
-$sudo update-alternatives --config mvn
+sudo update-alternatives --config mvn
 ```
 * Change alternative to new one (Not needed if mvn version is already latest)
 ```
@@ -28,15 +28,15 @@ sudo update-alternatives --config mvn
 ```
 * Check the mvn version
 ```
-$mvn -version
+mvn -version
 ```
 * type command
 ```
-$type -a mvn
+type -a mvn
 ```
 * Set the path
 ```
-$export PATH=/opt/apache-maven-3.8.4/bin/:$PATH
+export PATH=/opt/apache-maven-3.8.4/bin/:$PATH
 ```
 
 ### 1. Create Maven Project Architecture
