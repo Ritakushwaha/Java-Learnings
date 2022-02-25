@@ -1,6 +1,6 @@
 # Java Learning
 
-# Maven Project creation
+# Maven Java Project creation
 
 ## Download and Installation -
 
